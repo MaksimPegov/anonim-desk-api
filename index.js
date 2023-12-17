@@ -14,7 +14,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/messages', async (req, res) => {
   try {
     const response = await messagesService.getMessages();
-    res.send(response);
+    res.status(200).send(response);
   } catch (e) {
     res.status(500).send(e.message);
   }
@@ -23,7 +23,7 @@ app.get('/messages', async (req, res) => {
 app.post('/messages', async (req, res) => {
   try {
     const response = await messagesService.addMessage(req.body);
-    res.send(response);
+    res.status(201).send(response);
   } catch (e) {
     res.status(500).send(e.message);
   }
@@ -32,7 +32,7 @@ app.post('/messages', async (req, res) => {
 app.delete('/messages/:id', async (req, res) => {
   try {
     const response = await messagesService.deleteMessage(req.params.id);
-    res.send(response);
+    res.status(200).send(response);
   } catch (e) {
     res.status(500).send(e.message);
   }
