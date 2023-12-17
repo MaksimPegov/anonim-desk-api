@@ -20,6 +20,15 @@ app.get('/messages', async (req, res) => {
   }
 });
 
+app.post('/messages', async (req, res) => {
+  try {
+    const response = await messagesService.addMessage(req.body);
+    res.send(response);
+  } catch (e) {
+    res.status(500).send(e.message);
+  }
+});
+
 app.delete('/messages/:id', async (req, res) => {
   try {
     const response = await messagesService.deleteMessage(req.params.id);

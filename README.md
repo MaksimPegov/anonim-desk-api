@@ -22,6 +22,12 @@ This is a REST API for the Anonim Desk application.
   npm install
   ```
 
+4. Install database using `database.sql`:
+
+```sql
+source database.sql
+```
+
 ## Running the API
 
 1. Start the API server:
