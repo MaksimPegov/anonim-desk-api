@@ -1,6 +1,7 @@
 # REST API
 
 This is a REST API for the Anonim Desk application.
+### Tech stack: `Express.js` `Node.js` `MySql`
 
 ## Installation
 
@@ -29,7 +30,7 @@ This is a REST API for the Anonim Desk application.
 1. Start the API server:
 
   ```bash
-  npm start
+  node index.js
   ```
 
 2. The API will be accessible at `http://localhost:3000`.
